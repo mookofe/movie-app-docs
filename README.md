@@ -51,6 +51,7 @@ Name | Type | Purpose
 
 ```
 POST https://apis.sans-movies.org/authentication/v1/login
+Accept: application/json
 ```
 
 **Payload:**
@@ -65,6 +66,9 @@ POST https://apis.sans-movies.org/authentication/v1/login
 **Response:**
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "accessToken": "eyJraWQiOiI0XC9...",
     "expiresIn": 3600,
@@ -78,6 +82,7 @@ POST https://apis.sans-movies.org/authentication/v1/login
 ### Get list of movies:
 ```
 GET https://apis.sans-movies.org/movies/v1/movies?orderBy=releaseYear&orientation=asc&skip=0&limit=10
+Accept: application/json
 ```
 
 **Headers:**
@@ -98,6 +103,9 @@ limit|Integer|No|1-100|20|Number of rows to retreive
 **Response:**
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "data": [
         {
@@ -127,6 +135,7 @@ limit|Integer|No|1-100|20|Number of rows to retreive
 ### Create movie:
 ```
 POST https://apis.sans-movies.org/movies/v1/movies
+Accept: application/json
 ```
 
 **Headers:**
@@ -160,6 +169,9 @@ rating|Integer|Yes|1-5||Movie rating
 **Response:**
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "id": 2,
     "title": "Terminator 2: Judgment Day",
@@ -187,6 +199,7 @@ rating|Integer|Yes|1-5||Movie rating
 ### Get movie details
 ```
 GET https://apis.sans-movies.org/movies/v1/movies/{id}
+Accept: application/json
 ```
 
 **Headers:**
@@ -204,6 +217,9 @@ id|Integer|Yes|Movie identifier
 **Response:**
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "id": 2,
     "title": "Terminator 2: Judgment Day",
@@ -230,6 +246,7 @@ id|Integer|Yes|Movie identifier
 ### Update movie:
 ```
 PUT https://apis.sans-movies.org/movies/v1/movies/{id}
+Accept: application/json
 ```
 
 **Headers:**
@@ -269,6 +286,9 @@ rating|Integer|Yes|1-5||Movie rating
 **Response:**
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "id": 2,
     "title": "Terminator 2: Judgment Day",
@@ -312,43 +332,7 @@ id|Integer|Yes|Movie identifier
 **Response:**
 
 ```
-Status: 204 No Content
-```
-
----
-
-### Get movie metadata by IMDB Id
-```
-GET https://apis.sans-movies.org/movies/v1/movie-meta/{imdbId}
-```
-
-**Headers:**
-
-Name|Type|Required|Description
----|---|---|---
-Authorization|String|Yes| idToken from authentication endpoint
-
-**Query Parameters:**
-
-Name|Type|Required|Description
----|---|---|---
-imdbId |String|Yes|IMDB identifier
-
-**Response:**
-
-```
-{
-    "rated": "R",
-    "dateReleased": "1991-07-03T00:00:00+00:00",
-    "genre": "Action, Sci-Fi",
-    "director": "James Cameron",
-    "writers": "James Cameron, William Wisher",
-    "plot": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",
-    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
-    "imdbRating": 8.5,
-    "rottenTomatoesRating": 93,
-    "boxOffice": 198116802
-}
+HTTP/1.1 204 No Content
 ```
 
 ---
@@ -356,6 +340,7 @@ imdbId |String|Yes|IMDB identifier
 ### Search movie metadata
 ```
 GET https://apis.sans-movies.org/movies/v1/movie-meta-search
+Accept: application/json
 ```
 
 **Headers:**
@@ -374,6 +359,9 @@ title |String|No (Require one)|Movie title
 **Response:**
 
 ```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
 {
     "rated": "R",
     "dateReleased": "1991-07-03T00:00:00+00:00",
