@@ -196,7 +196,7 @@ id|Integer|Yes|Movie identifier
 ---
 ### Update movie:
 ```
-PUT https://apis.sans-movies.org/movies/v1/movies/2
+PUT https://apis.sans-movies.org/movies/v1/movies/{id}
 ```
 
 **Headers:**
@@ -261,7 +261,7 @@ rating|Integer|Yes|1-5||Movie rating
 ---
 ### Delete movie:
 ```
-DELETE https://apis.sans-movies.org/movies/v1/movies/2
+DELETE https://apis.sans-movies.org/movies/v1/movies/{id}
 ```
 
 **Headers:**
