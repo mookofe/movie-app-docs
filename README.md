@@ -45,7 +45,7 @@ Name | Type | Purpose
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#get-movie-details)|GET|Get movie details
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#update-movie)|PUT|Update Movie
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#delete-movie)|DELETE|Delete Movie
-[https://apis.sans-movies.org/movies/v1/movie-meta-search](#get-list-of-movies)|GET|Search movie metadata
+[https://apis.sans-movies.org/movies/v1/movie-meta-search](#search-movie-metadata)|GET|Search movie metadata
 ---
 ### Authenticate user:
 
