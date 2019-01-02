@@ -7,12 +7,11 @@
 **Authentication:**||
 [https://apis.sans-movies.org/authentication/v1/login](#authenticate-user)|POST|Authenticate User
 **Movies:**||
-https://apis.sans-movies.org/movies/v1/movies|GET|Get list of movies
-https://apis.sans-movies.org/movies/v1/movies|POST|Create movie
-https://apis.sans-movies.org/movies/v1/movies/{id}|GET|Get movie details
-https://apis.sans-movies.org/movies/v1/movies/{id}|PUT|Update Movie
-https://apis.sans-movies.org/movies/v1/movies/{id}|DELETE|Delete Movie
-
+[https://apis.sans-movies.org/movies/v1/movies](#get-list-of-movies)|GET|Get list of movies
+[https://apis.sans-movies.org/movies/v1/movies](#create-movie)|POST|Create movie
+[https://apis.sans-movies.org/movies/v1/movies/{id}](#get-movie-details)|GET|Get movie details
+[https://apis.sans-movies.org/movies/v1/movies/{id}](#update-movie)|PUT|Update Movie
+[https://apis.sans-movies.org/movies/v1/movies/{id}](#felete-movie)|DELETE|Delete Movie
 
 ---
 ### Authenticate user:
@@ -43,7 +42,7 @@ POST https://apis.sans-movies.org/authentication/v1/login
 ```
 ---
 
-###Get list of movies:
+### Get list of movies:
 ```
 GET https://apis.sans-movies.org/movies/v1/movies?orderBy=releaseYear&orientation=asc&skip=0&limit=10
 ```
@@ -92,7 +91,7 @@ limit|Integer|No|1-100|20|Number of rows to retreive
 }
 ```
 ---
-###Create movie:
+### Create movie:
 ```
 POST https://apis.sans-movies.org/movies/v1/movies
 ```
@@ -152,7 +151,7 @@ rating|Integer|Yes|1-5||Movie rating
 
 ---
 
-###Get movie details
+### Get movie details
 ```
 GET https://apis.sans-movies.org/movies/v1/movies/{id}
 ```
@@ -195,7 +194,7 @@ id|Integer|Yes|Movie identifier
 ```
 
 ---
-###Update movie:
+### Update movie:
 ```
 PUT https://apis.sans-movies.org/movies/v1/movies/2
 ```
@@ -254,7 +253,7 @@ rating|Integer|Yes|1-5||Movie rating
 ```
 
 ---
-###Delete movie:
+### Delete movie:
 ```
 DELETE https://apis.sans-movies.org/movies/v1/movies/2
 ```
