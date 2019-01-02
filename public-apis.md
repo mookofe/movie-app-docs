@@ -1,5 +1,6 @@
-#Public API Endpoints
-###**List of endpoints:**
+# Public API Endpoints
+
+### **List of endpoints:**
 
 |URL|Method|Description|
 ---|---|---
@@ -14,7 +15,7 @@ https://apis.sans-movies.org/movies/v1/movies/{id}|DELETE|Delete Movie
 
 
 ---
-###Authenticate user:
+### Authenticate user:
 
 ```
 POST https://apis.sans-movies.org/authentication/v1/login
