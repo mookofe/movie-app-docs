@@ -100,7 +100,7 @@ POST https://apis.sans-movies.org/movies/v1/movies
 
 Name|Type|Required|Description
 ---|---|---|---
-Authorization|string|Yes| idToken from authentication endpoint
+Authorization|String|Yes| idToken from authentication endpoint
 
 **Payload:**
 
@@ -160,7 +160,7 @@ GET https://apis.sans-movies.org/movies/v1/movies/{id}
 
 Name|Type|Required|Description
 ---|---|---|---
-Authorization|string|Yes| idToken from authentication endpoint
+Authorization|String|Yes| idToken from authentication endpoint
 
 **Query Parameters:**
 
@@ -203,7 +203,7 @@ PUT https://apis.sans-movies.org/movies/v1/movies/2
 
 Name|Type|Required|Description
 ---|---|---|---
-Authorization|string|Yes| idToken from authentication endpoint
+Authorization|String|Yes| idToken from authentication endpoint
 
 **Query Parameters:**
 
@@ -268,7 +268,7 @@ DELETE https://apis.sans-movies.org/movies/v1/movies/2
 
 Name|Type|Required|Description
 ---|---|---|---
-Authorization|string|Yes| idToken from authentication endpoint
+Authorization|String|Yes| idToken from authentication endpoint
 
 **Query Parameters:**
 
