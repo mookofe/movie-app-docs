@@ -165,7 +165,7 @@ Authorization|string|Yes| idToken from authentication endpoint
 **Query Parameters:**
 
 Name|Type|Required|Description
----|---|---|---|---|---
+---|---|---|---
 id|Integer|Yes|Movie identifier
 
 **Response:**
