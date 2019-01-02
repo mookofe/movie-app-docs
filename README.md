@@ -45,7 +45,7 @@ Name | Type | Purpose
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#get-movie-details)|GET|Get movie details
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#update-movie)|PUT|Update Movie
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#delete-movie)|DELETE|Delete Movie
-
+[https://apis.sans-movies.org/movies/v1/movie-meta-search](#get-list-of-movies)|GET|Search movie metadata
 ---
 ### Authenticate user:
 
@@ -313,6 +313,79 @@ id|Integer|Yes|Movie identifier
 
 ```
 Status: 204 No Content
+```
+
+---
+
+### Get movie metadata by IMDB Id
+```
+GET https://apis.sans-movies.org/movies/v1/movie-meta/{imdbId}
+```
+
+**Headers:**
+
+Name|Type|Required|Description
+---|---|---|---
+Authorization|String|Yes| idToken from authentication endpoint
+
+**Query Parameters:**
+
+Name|Type|Required|Description
+---|---|---|---
+imdbId |String|Yes|IMDB identifier
+
+**Response:**
+
+```
+{
+    "rated": "R",
+    "dateReleased": "1991-07-03T00:00:00+00:00",
+    "genre": "Action, Sci-Fi",
+    "director": "James Cameron",
+    "writers": "James Cameron, William Wisher",
+    "plot": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    "imdbRating": 8.5,
+    "rottenTomatoesRating": 93,
+    "boxOffice": 198116802
+}
+```
+
+---
+
+### Search movie metadata
+```
+GET https://apis.sans-movies.org/movies/v1/movie-meta-search
+```
+
+**Headers:**
+
+Name|Type|Required|Description
+---|---|---|---
+Authorization|String|Yes| idToken from authentication endpoint
+
+**Query Parameters:**
+
+Name|Type|Required|Description
+---|---|---|---
+imdbId |String|No (Require one)|Movie IMDB identifier
+title |String|No (Require one)|Movie title
+
+**Response:**
+
+```
+{
+    "rated": "R",
+    "dateReleased": "1991-07-03T00:00:00+00:00",
+    "genre": "Action, Sci-Fi",
+    "director": "James Cameron",
+    "writers": "James Cameron, William Wisher",
+    "plot": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",
+    "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    "imdbRating": 8.5,
+    "rottenTomatoesRating": 93,
+    "boxOffice": 198116802
+}
 ```
 
 ## Project Roadmap
