@@ -11,7 +11,7 @@
 [https://apis.sans-movies.org/movies/v1/movies](#create-movie)|POST|Create movie
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#get-movie-details)|GET|Get movie details
 [https://apis.sans-movies.org/movies/v1/movies/{id}](#update-movie)|PUT|Update Movie
-[https://apis.sans-movies.org/movies/v1/movies/{id}](#felete-movie)|DELETE|Delete Movie
+[https://apis.sans-movies.org/movies/v1/movies/{id}](#delete-movie)|DELETE|Delete Movie
 
 ---
 ### Authenticate user:
